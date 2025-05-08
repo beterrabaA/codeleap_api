@@ -12,7 +12,7 @@ class PostSerializer(serializers.ModelSerializer):
 class PostCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ["username", "title", "content"]
+        fields = "__all__"
         extra_kwargs = {
             "id": {"read_only": True},
             "created_datetime": {"read_only": True},
@@ -26,8 +26,11 @@ class PostCreateSerializer(serializers.ModelSerializer):
 class PostUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ["title", "content"]
+        fields = "__all__"
         extra_kwargs = {
+            "id": {"read_only": True},
+            "created_datetime": {"read_only": True},
+            "username": {"read_only": True},
             "title": {"required": True},
             "content": {"required": True},
         }
