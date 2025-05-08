@@ -21,8 +21,8 @@ Este é o README para o projeto **CodeLeap API**. Aqui você encontrará informa
 - **GET** `/`  
     Lista todos os posts.
 
-- **GET** `/{id}/`  
-    Retorna os detalhes de um post específico.
+- **DELETE** `/{id}/`  
+    Remove um post.
 
 - **PATCH** `/{id}/`  
     Atualiza os dados de um post.  
@@ -34,9 +34,6 @@ Este é o README para o projeto **CodeLeap API**. Aqui você encontrará informa
         "content": "string"
     }
     ```
-
-- **DELETE** `/{id}/`  
-    Remove um post.
 
 ## Instruções para iniciar o projeto
 
@@ -112,22 +109,12 @@ Você verá o nome do ambiente virtual atual no prompt do terminal, indicando qu
 
 ## Variáveis de Ambiente
 
-Certifique-se de configurar as seguintes variáveis de ambiente no arquivo `.env`:
+Existe um arquivo `.env.example` que serve como um modelo para o arquivo `.env` que será usado em produção ou desenvolvimento. Por exemplo:
 
-- `DB_HOST`: Host do banco de dados.
-- `DB_PORT`: Porta do banco de dados.
-- `DB_NAME`: Nome do banco de dados.
-- `DB_USER`: Usuário do banco de dados.
-- `DB_PASSWORD`: Senha do banco de dados.
-
-## Testes
-
-Para rodar os testes, utilize o comando:
-
-```bash
-docker-compose exec web pytest
+```env
+POSTGRES_HOST= // Host do banco de dados.
+POSTGRES_PORT= // Porta do banco de dados.
+POSTGRES_DB= // Nome do banco de dados.
+POSTGRES_USER= // Usuário do banco de dados.
+POSTGRES_PASSWORD= // Senha do banco de dados.
 ```
-
-## Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
