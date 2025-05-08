@@ -1,13 +1,13 @@
 # CodeLeap API
 
-Este é o README para o projeto **CodeLeap API**. Aqui você encontrará informações sobre as rotas disponíveis e instruções para iniciar o projeto utilizando o `docker-compose.yaml`.
+This is the README for the **CodeLeap API** project. Here you will find information about the available routes and instructions to start the project using `docker-compose.yaml`.
 
-## Rotas da API
+## API Routes
 
 ### **Posts**
 
 - **POST** `/`  
-    Cria um novo post.  
+    Creates a new post.  
     **Body:**  
 
     ```json
@@ -19,13 +19,13 @@ Este é o README para o projeto **CodeLeap API**. Aqui você encontrará informa
     ```
 
 - **GET** `/`  
-    Lista todos os posts.
+    Lists all posts.
 
 - **DELETE** `/{id}/`  
-    Remove um post.
+    Deletes a post.
 
 - **PATCH** `/{id}/`  
-    Atualiza os dados de um post.  
+    Updates a post's data.  
     **Body:**  
 
     ```json
@@ -35,86 +35,86 @@ Este é o README para o projeto **CodeLeap API**. Aqui você encontrará informa
     }
     ```
 
-## Instruções para iniciar o projeto
+## Instructions to Start the Project
 
-### Clonando o projeto
+### Cloning the Project
 
-1. Clone o repositório do projeto:
+1. Clone the project repository:
 
     ```bash
-    git clone https://github.com/seu-usuario/codeleap_api.git
+    git clone https://github.com/your-username/codeleap_api.git
     ```
 
-### Criando um Ambiente Virtual com o venv
+### Creating a Virtual Environment with venv
 
-1. Navegue até o diretório do projeto:
+1. Navigate to the project directory:
 
      ```bash
      cd /codeleap_api
      ```
 
-2. **Crie o Ambiente Virtual**
+2. **Create the Virtual Environment**
 
-     Use o comando python -m venv nome_do_ambiente para criar um ambiente virtual com o nome desejado. Substitua nome_do_ambiente pelo nome que você escolher para o ambiente virtual.
-
-    ```bash
-    python -m venv meu_ambiente_virtual
-    ```
-
-3. **Ative o Ambiente Virtual**
-
-    Dependendo do seu sistema operacional, o comando para ativar o ambiente virtual varia:
-
-    3.1. No Windows:
+     Use the command `python -m venv <environment_name>` to create a virtual environment with the desired name. Replace `<environment_name>` with the name you choose for the virtual environment.
 
     ```bash
-    meu_ambiente_virtual\Scripts\activate
+    python -m venv my_virtual_env
     ```
 
-    3.2. No macOS e Linux:
+3. **Activate the Virtual Environment**
+
+    Depending on your operating system, the command to activate the virtual environment varies:
+
+    3.1. On Windows:
 
     ```bash
-    python -m venv meu_ambiente_virtual
+    my_virtual_env\Scripts\activate
     ```
 
-Você verá o nome do ambiente virtual atual no prompt do terminal, indicando que o ambiente foi ativado com sucesso.
+    3.2. On macOS and Linux:
+
+    ```bash
+    source my_virtual_env/bin/activate
+    ```
+
+You will see the name of the current virtual environment in the terminal prompt, indicating that the environment has been successfully activated.
 
 ### Docker
 
-1. Certifique-se de ter o Docker e o Docker Compose instalados em sua máquina.
+1. Ensure that Docker and Docker Compose are installed on your machine.
 
-2. Inicie os serviços definidos no arquivo `infra/compose.yaml`:
+2. Start the services defined in the `infra/compose.yaml` file:
 
      ```bash
      docker compose -f infra/compose.yaml up -d
      ```
 
-### Inicializando o banco de dados
+### Initializing the Database
 
-1. Inicie o processo de migração com o comando:
+1. Start the migration process with the command:
 
     ```bash
     python manage.py migrate
     ```
 
-### Inicializando o servidor da API
+### Starting the API Server
 
-1. Inicie a API rodando o comando:
+1. Start the API by running the command:
 
     ```bash
     python manage.py runserver
     ```
 
-2. Acesse a API em `http://localhost:8000`.
+2. Access the API at `http://localhost:8000/`.
 
-## Variáveis de Ambiente
+## Environment Variables
 
-Existe um arquivo `.env.example` que serve como um modelo para o arquivo `.env` que será usado em produção ou desenvolvimento. Por exemplo:
+There is a `.env.example` file that serves as a template for the `.env` file to be used in production or development. For example:
 
 ```env
-POSTGRES_HOST= // Host do banco de dados.
-POSTGRES_PORT= // Porta do banco de dados.
-POSTGRES_DB= // Nome do banco de dados.
-POSTGRES_USER= // Usuário do banco de dados.
-POSTGRES_PASSWORD= // Senha do banco de dados.
+POSTGRES_HOST= // Database host.
+POSTGRES_PORT= // Database port.
+POSTGRES_DB= // Database name.
+POSTGRES_USER= // Database user.
+POSTGRES_PASSWORD= // Database password.
 ```
