@@ -50,7 +50,7 @@ This is the README for the **CodeLeap API** project. Here you will find informat
 1. Navigate to the project directory:
 
      ```bash
-     cd /codeleap_api
+     cd codeleap_api
      ```
 
 2. **Create the Virtual Environment**
