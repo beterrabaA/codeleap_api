@@ -42,7 +42,7 @@ This is the README for the **CodeLeap API** project. Here you will find informat
 1. Clone the project repository:
 
     ```bash
-    git clone https://github.com/your-username/codeleap_api.git
+    git clone git@github.com:beterrabaA/codeleap_api.git
     ```
 
 ### Creating a Virtual Environment with venv
