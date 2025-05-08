@@ -58,7 +58,7 @@ This is the README for the **CodeLeap API** project. Here you will find informat
      Use the command `python -m venv <environment_name>` to create a virtual environment with the desired name. Replace `<environment_name>` with the name you choose for the virtual environment.
 
     ```bash
-    python -m venv my_virtual_env
+    python3 -m venv my_virtual_env
     ```
 
 3. **Activate the Virtual Environment**
@@ -77,7 +77,15 @@ This is the README for the **CodeLeap API** project. Here you will find informat
     source my_virtual_env/bin/activate
     ```
 
-You will see the name of the current virtual environment in the terminal prompt, indicating that the environment has been successfully activated.
+    You will see the name of the current virtual environment in the terminal prompt, indicating that the environment has been successfully activated.
+
+4. **Installing Dependencies**
+
+    Install the required Python dependencies listed in the `requirements.txt` file using `pip`:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ### Docker
 
