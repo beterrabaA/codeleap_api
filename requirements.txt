@@ -1,4 +1,4 @@
 django==5.2.1
 psycopg2==2.9.10
 djangorestframework==3.16.0
-load_dotenv==1.1.0
+load_dotenv==0.1.0
