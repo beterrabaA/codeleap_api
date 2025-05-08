@@ -87,6 +87,20 @@ This is the README for the **CodeLeap API** project. Here you will find informat
     pip install -r requirements.txt
     ```
 
+### Environment Variables
+
+1. Setting up environment variables
+
+    ```env
+    POSTGRES_HOST= // Database host.
+    POSTGRES_PORT= // Database port.
+    POSTGRES_DB= // Database name.
+    POSTGRES_USER= // Database user.
+    POSTGRES_PASSWORD= // Database password.
+    ```
+
+    _There is a `.env.example` file that serves as a template for the `.env` file to be used in production or development._
+
 ### Docker
 
 1. Ensure that Docker and Docker Compose are installed on your machine.
@@ -114,15 +128,3 @@ This is the README for the **CodeLeap API** project. Here you will find informat
     ```
 
 2. Access the API at `http://localhost:8000/`.
-
-## Environment Variables
-
-There is a `.env.example` file that serves as a template for the `.env` file to be used in production or development. For example:
-
-```env
-POSTGRES_HOST= // Database host.
-POSTGRES_PORT= // Database port.
-POSTGRES_DB= // Database name.
-POSTGRES_USER= // Database user.
-POSTGRES_PASSWORD= // Database password.
-```
